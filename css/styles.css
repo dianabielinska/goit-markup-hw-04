@@ -177,6 +177,7 @@ img {
   border: none;
   height: 56px;
   min-width: 169px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -302,6 +303,7 @@ img {
 .team-social-item {
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link {
@@ -311,6 +313,10 @@ img {
   width: 100%;
   height: 100%;
   padding: 12px;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #404bbf;
 }
 
 .team-icon {
@@ -347,9 +353,32 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.portfolio-img {
-  display: block;
-  max-width: 100%;
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .overlay-text,
+.portfolio-item:focus .overlay-text {
+  cursor: pointer;
+  transform: translateY(0);
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-overlay {
@@ -409,4 +438,37 @@ img {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
+}
+
+.footer-nav-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link {
+  display: inline-block;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+.footer-icon {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #404bbf;
 }
