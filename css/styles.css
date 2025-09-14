@@ -446,6 +446,15 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
+}
+.footer-overlay-two {
+  display: flex;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
 .footer-social-item {
@@ -470,5 +479,5 @@ img {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: #404bbf;
+  background-color: #31d0aa;
 }
